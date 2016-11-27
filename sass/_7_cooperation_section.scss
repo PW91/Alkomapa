@@ -1,0 +1,94 @@
+.cooperation {
+  padding: 50px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cooperation-text-container h3 {
+	font-size: 4em;
+  margin: 0 0 50px 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+.cooperation-step-circle {
+  width: 100%;
+  background-color: black;
+  padding-top: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.75);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.first-step {
+    background-image: url("../assets/step-1.png");
+  }
+
+  &.second-step {
+    background-image: url("../assets/step-2.png");
+  }
+
+  &.third-step {
+    background-image: url("../assets/step-3.png");
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  @media(max-width: 767px) {
+    width: 60%;
+    padding-top: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cooperation-step-text {
+  margin: 3vw 0 0;
+
+  @media(max-width: 1200px) {
+    margin: 4vw 0 0 0;
+  }
+
+  @media(max-width: 992px) {
+    margin: 2vw 0 0 0;
+  }
+
+  @media(max-width: 767px) {
+    margin: 0;
+  }
+
+  h5 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+
+    @media(max-width: 767px) {
+      text-align: center;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+
+    @media(max-width: 767px) {
+      text-align: center;
+      margin: 0 0 20px 0;
+      padding: 0 50px;
+    }
+  }
+
+  &.second-step {
+    text-align: right;
+  }
+}

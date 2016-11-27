@@ -1,0 +1,167 @@
+.start {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/background-main.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media(max-width: 767px) {
+    background-attachment: scroll;
+  }
+}
+
+.start-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,0.0);
+  transition: all 1500ms ease-in-out;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  &.dimmed {
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+.start-mobile-general-container {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+  padding: 75px 0 25px 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+
+  @media (max-width: 480px) {
+    padding: 65px 0 15px 0;
+  }
+}
+
+.start-mobile-general-container-branding-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-mobile-general-container-branding-container-logo {
+  display: inline-block;
+  width: 32vw;
+  height: 16vw;
+  background-image: url("../assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: relative;
+  top: 0;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.start-mobile-general-container-branding-container-text {
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 12vw;
+  }
+
+  h2 {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    margin: -6vw 0 0 0;
+    padding: 0;
+    font-size: 6vw;
+  }
+}
+
+.start-mobile-general-container-download-buttons-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: 0;
+}
+
+.start-mobile-general-container-download-button {
+  display: inline-block;
+  padding: 0;
+  margin: 10px 0;
+  width: 60%;
+  height: 17vw;
+  background-color: black;
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  @media(max-width: 480px) {
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  &.google-play {
+    background-image: url("../assets/google-play.png");
+  }
+
+  &.app-store {
+    background-image: url("../assets/app-store.png");
+  }
+}
+
+.start-desktop-text-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  h2 {
+    font-size: 6vw;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}

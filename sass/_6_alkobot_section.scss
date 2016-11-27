@@ -1,0 +1,117 @@
+.alkobot {
+  width: 100%;
+  background-color: $mainColor;
+  padding: 50px 0;
+  overflow: hidden;
+  background-image: url("../assets/background-lines.png");
+  background-position: center;
+  background-size: 90%;
+  background-repeat: repeat;
+
+  @media(max-width: 767px) {
+    background-size: 150%;
+  }
+
+  @media(max-width: 480px) {
+    background-size: 200%;
+  }
+}
+
+.alkobot-messages-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.alkobot-message {
+  width: 90%;
+  background-color: #0084ff;
+  border-radius: 50px;
+  margin: 10px 0 10px auto;
+  color: white;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.75);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+
+  @media(max-width: 992px) {
+    border-radius: 20px;
+  }
+
+  @media(max-width: 767px) {
+    width: 75%;
+    border-radius: 15px;
+    margin: 10px 0 10px 10vw;
+  }
+
+  @media(max-width: 768px) {
+    margin: 5px 0 5px 10vw;
+  }
+
+  &:nth-child(2n) {
+    margin: 10px auto 10px 0;
+    background-color: #f7f7f7;
+    color: black;
+
+    @media(max-width: 767px) {
+      margin: 10px 10vw 10px 0;
+    }
+
+    @media(max-width: 480px) {
+      margin: 5px 10vw 5px 0;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.alkobot-message p {
+  margin: 0;
+  padding: 15px 40px;
+  font-size: 1.2em;
+}
+
+.alkobot h3 {
+  color: white;
+  margin: 20px 0;
+  padding: 0;
+  font-size: 4em;
+  opacity: 0;
+
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.alkobot-image {
+  margin: -200px 0 0 70px;
+  height: 400px;
+  width: 100%;
+  background-image: url("../assets/bot.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  opacity: 0;
+
+  @media(max-width: 1200px) {
+    height: 350px;
+    margin: -150px 0 0 100px;
+  }
+
+  @media(max-width: 992px) {
+    height: 250px;
+    margin: 0;
+    background-position: center;
+  }
+
+  @media(max-width: 767px) {
+    margin: 20px 0 0 0;
+  }
+
+  @media(max-width: 480px) {
+    height: 200px;
+  }
+}
