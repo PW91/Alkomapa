@@ -39,14 +39,14 @@
   align-items: center;
   flex-wrap: wrap;
   display: none;
-  padding: 75px 0 25px 0;
+  padding: 75px 0 45px 0;
 
   @media (max-width: 767px) {
     display: flex;
   }
 
   @media (max-width: 480px) {
-    padding: 65px 0 15px 0;
+    padding: 65px 0 35px 0;
   }
 }
 
